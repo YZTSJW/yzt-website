@@ -476,7 +476,7 @@ section { position: relative; }
 .about-full img { border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; height: 400px; object-fit: cover; }
 
 /* 滚动渐入 */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
 /* ==========================================================================
