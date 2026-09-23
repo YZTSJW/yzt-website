@@ -43,6 +43,12 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(function (el) { io.observe(el); });
+    /* 兜底：若 1.5 秒后仍有渐入元素未显示（观察器异常/特殊浏览器），强制全部显示，保证内容不丢失 */
+    setTimeout(function () {
+      revealEls.forEach(function (el) {
+        if (!el.classList.contains('visible')) { el.classList.add('visible'); }
+      });
+    }, 1500);
   } else {
     revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
