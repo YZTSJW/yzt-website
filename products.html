@@ -32,8 +32,8 @@
     <div class="header-tel">
       <span class="tel-icon">☎</span>
       <span>
-        <span class="tel-num">138 2579 3945</span>
-        <span class="tel-tip">程先生 · 24小时咨询</span>
+        <span class="tel-num">0769 8554 7626</span>
+        <span class="tel-tip">宋小姐 · 工作时间</span>
       </span>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
@@ -75,7 +75,7 @@
         <p>支持按图纸 / 样品开发定制，欢迎洽谈合作。</p>
       </div>
       <div class="actions">
-        <a href="tel:13825793945" class="btn btn-primary">☎ 138 2579 3945</a>
+        <a href="tel:076985547626" class="btn btn-primary">☎ 0769 8554 7626</a>
         <a href="contact.html" class="btn btn-outline">在线留言</a>
       </div>
     </div>
@@ -111,8 +111,7 @@
       <div class="footer-col">
         <h4>联系方式</h4>
         <ul class="footer-contact">
-          <li><span class="ic">▸</span>联系人：程先生</li>
-          <li><span class="ic">▸</span>手机：138 2579 3945 / 135 0984 1548</li>
+          <li><span class="ic">▸</span>联系人：宋小姐</li>
           <li><span class="ic">▸</span>电话：0769-8554 7626</li>
           <li><span class="ic">▸</span>地址：广东省东莞市长安镇厦岗第四工业区</li>
         </ul>
@@ -132,7 +131,7 @@
 <div class="lightbox" id="lightbox">
   <button class="lb-btn lb-close" id="lbClose" aria-label="关闭">×</button>
   <button class="lb-btn lb-prev" id="lbPrev" aria-label="上一张">‹</button>
-  <img id="lbImg" alt="产品大图">
+  <img id="lbImg" src="" alt="产品大图">
   <button class="lb-btn lb-next" id="lbNext" aria-label="下一张">›</button>
 </div>
 
@@ -172,7 +171,7 @@
     d.className = 'prod-cell';
     d.setAttribute('translate', 'no');
     var img = document.createElement('img');
-    img.src = '' + p.n + '.jpg';
+    img.src = 'pic/products/' + p.n + '.jpg';
     img.alt = p.m + ' 连接器';
     img.loading = 'lazy';
     d.appendChild(img);
@@ -212,14 +211,14 @@
   function openLb(p){
     var list = currentList();
     lbIdx = list.indexOf(p);
-    lbImg.src = '' + p.n + '.jpg';
+    lbImg.src = 'pic/products/' + p.n + '.jpg';
     lb.classList.add('open');
   }
   function closeLb(){ lb.classList.remove('open'); }
   function step(dir){
     var list = currentList();
     lbIdx = (lbIdx + dir + list.length) % list.length;
-    lbImg.src = '' + list[lbIdx].n + '.jpg';
+    lbImg.src = 'pic/products/' + list[lbIdx].n + '.jpg';
   }
   document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
