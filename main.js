@@ -64,17 +64,3 @@
     });
   }
 
-  /* 5. 留言表单（contact.html）— 提交提示 */
-  var form = document.getElementById('feedbackForm');
-  var formTip = document.getElementById('formTip');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (formTip) {
-        formTip.textContent = '✅ 提交成功！我们会尽快与您联系。';
-        formTip.style.color = '#16a34a';
-      }
-      form.reset();
-    });
-  }
-})();
